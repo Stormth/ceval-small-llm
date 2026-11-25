@@ -1,0 +1,10 @@
+# PyTorch is intentionally not pinned here.
+# Install the wheel that matches the cluster CUDA version first, for example:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu124
+transformers>=4.43,<5
+safetensors>=0.4
+sentencepiece>=0.1.99
+pyyaml>=6.0
+tqdm>=4.66
+numpy>=1.24
+huggingface-hub>=0.24

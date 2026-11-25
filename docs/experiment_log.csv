@@ -1,0 +1,9 @@
+﻿experiment_id,owner,model,precision,benchmark,n_samples,change_description,seed,decoding,device,threads,calls,total_time_sec,accuracy,format_valid_rate,truncation_rate,commit_hash,notes
+exp00_baseline,shared,Qwen2.5-0.5B-Instruct,fp16,C-Eval-val-200,200,official-style zero-shot,42,greedy,max_new_tokens=128,,,,,,,,,
+exp01_strict_prompt,member-A,Qwen2.5-0.5B-Instruct,fp16,C-Eval-val-200,200,strict output format,42,greedy,max_new_tokens=32,,,,,,,,,
+exp02_fewshot3,member-B,Qwen2.5-0.5B-Instruct,fp16,C-Eval-val-200,200,3 dev examples per subject,42,greedy,max_new_tokens=128,,,,,,,,,
+exp03_selfcheck,member-C,Qwen2.5-0.5B-Instruct,fp16,C-Eval-val-200,200,two-pass self-check,42,greedy,max_new_tokens=128,,,,,,,,,
+exp04_vote3,member-D,Qwen2.5-0.5B-Instruct,fp16,C-Eval-val-200,200,3 samples + majority vote,42,temperature=0.7,top_p=1.0,,,,,,,,
+abl_vote1,member-D,Qwen2.5-0.5B-Instruct,fp16,C-Eval-val-200,200,ablation n=1,42,temperature=0.7,top_p=1.0,,,,,,,,
+abl_vote3,member-D,Qwen2.5-0.5B-Instruct,fp16,C-Eval-val-200,200,ablation n=3,42,temperature=0.7,top_p=1.0,,,,,,,,
+abl_vote5,member-D,Qwen2.5-0.5B-Instruct,fp16,C-Eval-val-200,200,ablation n=5,42,temperature=0.7,top_p=1.0,,,,,,,,

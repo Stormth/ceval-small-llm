@@ -1,0 +1,17 @@
+extends: ../base.yaml
+
+experiment:
+  id: exp02_fewshot3
+  owner: member-B
+  description: "Only add 3 dev-set examples per subject; examples are outside the evaluation subset."
+
+prompt:
+  template: fewshot
+  num_examples: 3
+
+method:
+  name: single
+
+generation:
+  do_sample: false
+  max_new_tokens: 128

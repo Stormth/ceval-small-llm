@@ -1,0 +1,16 @@
+extends: ../base.yaml
+
+experiment:
+  id: exp03_selfcheck
+  owner: member-C
+  description: "Two calls per question: answer first, then review and correct the first answer."
+
+prompt:
+  template: baseline
+
+method:
+  name: self_check
+
+generation:
+  do_sample: false
+  max_new_tokens: 128

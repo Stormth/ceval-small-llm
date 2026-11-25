@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ceval-small-llm"
+version = "0.1.0"
+description = "Reproducible C-Eval evaluation for small instruction-tuned language models"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "transformers>=4.43,<5",
+  "safetensors>=0.4",
+  "sentencepiece>=0.1.99",
+  "pyyaml>=6.0",
+  "tqdm>=4.66",
+  "numpy>=1.24",
+  "huggingface-hub>=0.24",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+include = ["ceval_eval*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

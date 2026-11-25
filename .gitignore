@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+.cache/
+outputs/*
+!outputs/.gitkeep
+models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+slurm-*.out
+*.log
+.DS_Store

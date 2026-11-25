@@ -1,0 +1,11 @@
+extends: ../experiments/exp4_vote3.yaml
+
+experiment:
+  id: abl_vote1
+  owner: member-D
+  description: "Ablation: one sampled answer, no voting; same temperature as vote3/vote5."
+
+method:
+  name: self_consistency
+  num_samples: 1
+  temperature: 0.7

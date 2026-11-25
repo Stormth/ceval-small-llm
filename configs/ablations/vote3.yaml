@@ -1,0 +1,6 @@
+extends: ../experiments/exp4_vote3.yaml
+
+experiment:
+  id: abl_vote3
+  owner: member-D
+  description: "Ablation: three sampled answers with majority vote."

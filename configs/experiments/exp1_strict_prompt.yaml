@@ -1,0 +1,16 @@
+extends: ../base.yaml
+
+experiment:
+  id: exp01_strict_prompt
+  owner: member-A
+  description: "Only change the prompt: ask for one option letter and forbid explanations."
+
+prompt:
+  template: strict
+
+method:
+  name: single
+
+generation:
+  do_sample: false
+  max_new_tokens: 32

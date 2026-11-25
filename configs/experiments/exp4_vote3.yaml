@@ -1,0 +1,20 @@
+extends: ../base.yaml
+
+experiment:
+  id: exp04_vote3
+  owner: member-D
+  description: "Three sampled answers per question, majority vote; report the extra calls and latency."
+
+prompt:
+  template: baseline
+
+method:
+  name: self_consistency
+  num_samples: 3
+  temperature: 0.7
+
+generation:
+  do_sample: true
+  temperature: 0.7
+  top_p: 1.0
+  max_new_tokens: 128

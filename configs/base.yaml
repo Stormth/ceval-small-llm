@@ -1,0 +1,42 @@
+project_name: ceval-small-llm
+seed: 42
+
+model:
+  name_or_path: Qwen/Qwen2.5-0.5B-Instruct
+  local_path: null
+  revision: null
+  cache_dir: null
+  trust_remote_code: false
+  torch_dtype: auto
+  device: auto
+  local_files_only: false
+  low_cpu_mem_usage: false
+  attn_implementation: null
+
+data:
+  subset_path: data/subset.jsonl
+  fewshot_path: data/fewshot_examples.jsonl
+
+prompt:
+  template: baseline
+  system: "你是一个严谨的中文考试答题助手。"
+  num_examples: 3
+
+method:
+  name: single
+
+generation:
+  max_new_tokens: 128
+  do_sample: false
+  temperature: 1.0
+  top_p: 1.0
+  repetition_penalty: null
+
+runtime:
+  shard_index: 0
+  num_shards: 1
+  log_every: 10
+  mock: false
+
+output:
+  run_dir: null

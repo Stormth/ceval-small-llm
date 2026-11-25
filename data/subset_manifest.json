@@ -1,0 +1,72 @@
+{
+  "dataset": "ceval/ceval-exam",
+  "dataset_revision": "617524a00b307ff6f9933702f724131fe12ca7ce",
+  "dataset_last_modified": "2025-07-27T03:59:42.000Z",
+  "split": "val",
+  "source": "Hugging Face datasets-server rows API",
+  "source_url": "https://huggingface.co/datasets/ceval/ceval-exam",
+  "selection_rule": "Per-subject uniform random sample without replacement; each subject has an independent RNG seeded by '{seed}:{subject}:{split}'. The subset is frozen before any model run.",
+  "seed": 42,
+  "per_subject": 25,
+  "total": 200,
+  "num_subjects": 8,
+  "subjects": {
+    "college_economics": {
+      "name_cn": "大学经济学",
+      "category": "Social Science",
+      "available_in_val": 55,
+      "selected": 25
+    },
+    "accountant": {
+      "name_cn": "注册会计师",
+      "category": "Other",
+      "available_in_val": 49,
+      "selected": 25
+    },
+    "college_programming": {
+      "name_cn": "大学编程",
+      "category": "STEM",
+      "available_in_val": 37,
+      "selected": 25
+    },
+    "electrical_engineer": {
+      "name_cn": "注册电气工程师",
+      "category": "STEM",
+      "available_in_val": 37,
+      "selected": 25
+    },
+    "art_studies": {
+      "name_cn": "艺术学",
+      "category": "Humanities",
+      "available_in_val": 33,
+      "selected": 25
+    },
+    "teacher_qualification": {
+      "name_cn": "教师资格",
+      "category": "Social Science",
+      "available_in_val": 44,
+      "selected": 25
+    },
+    "environmental_impact_assessment_engineer": {
+      "name_cn": "环境影响评价工程师",
+      "category": "Other",
+      "available_in_val": 31,
+      "selected": 25
+    },
+    "civil_servant": {
+      "name_cn": "公务员",
+      "category": "Other",
+      "available_in_val": 47,
+      "selected": 25
+    }
+  },
+  "fewshot": {
+    "split": "dev",
+    "per_subject": 3,
+    "total": 24,
+    "path": "data\\fewshot_examples.jsonl"
+  },
+  "sha256": "92c3e860b1e5cb6fc84b120175e01fa85549c9828b0469182747ee6c568522a1",
+  "fewshot_sha256": "f30496edc83aaaa2545ac70607a631e2906f7008175075f6815a1c62cfb98c43",
+  "created_at": "2026-11-25T13:29:02.390802+00:00"
+}

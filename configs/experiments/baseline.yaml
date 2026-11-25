@@ -1,0 +1,19 @@
+extends: ../base.yaml
+
+experiment:
+  id: exp00_baseline
+  owner: shared
+  description: "Qwen2.5-0.5B-Instruct, zero-shot, C-Eval official-style prompt, greedy decoding."
+
+prompt:
+  template: baseline
+
+method:
+  name: single
+
+generation:
+  do_sample: false
+  max_new_tokens: 128
+
+output:
+  run_dir: null

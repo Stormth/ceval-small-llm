@@ -1,0 +1,26 @@
+seed: 42
+dataset: ceval/ceval-exam
+split: val
+per_subject: 25
+min_total: 200
+min_subjects: 5
+min_per_subject: 20
+
+subjects:
+  - college_economics
+  - accountant
+  - college_programming
+  - electrical_engineer
+  - art_studies
+  - teacher_qualification
+  - environmental_impact_assessment_engineer
+  - civil_servant
+
+fewshot:
+  split: dev
+  per_subject: 3
+
+output:
+  subset: data/subset.jsonl
+  manifest: data/subset_manifest.json
+  fewshot: data/fewshot_examples.jsonl

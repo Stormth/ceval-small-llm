@@ -1,0 +1,17 @@
+#!/bin/bash
+#PBS -N ceval-eval
+#PBS -l select=1:ncpus=8:ngpus=1
+#PBS -l walltime=12:00:00
+#PBS -j oe
+
+set -euo pipefail
+cd "${PBS_O_WORKDIR:-$PWD}"
+
+# Adapt these two lines to the cluster:
+# module load cuda/12.1
+# conda activate ceval
+
+CONFIG="${CONFIG:-configs/experiments/baseline.yaml}"
+RUN_DIR="${RUN_DIR:-outputs/exp00_baseline}"
+python scripts/run_eval.py --config "${CONFIG}" --run-dir "${RUN_DIR}"
+python scripts/merge_shards.py --run-dir "${RUN_DIR}"
