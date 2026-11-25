@@ -51,6 +51,8 @@ ceval-small-llm/
 
 ## 3. 集群环境安装
 
+> 完整的从零到跑完实验的步骤、时间预估、调度器提交和报错排查，见 **[docs/cluster_runbook.md](docs/cluster_runbook.md)**。下面是精简版。
+
 下面是通用 Conda 流程，具体 CUDA 版本按集群 `nvidia-smi` 调整。
 
 ```bash
